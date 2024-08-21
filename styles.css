@@ -16,6 +16,7 @@ img {
     top: 0px;
   position: relative;
  }
+ 
  .car-image{
     width: 100px;
     height: 100px;
@@ -36,7 +37,29 @@ img {
     margin: 10px;
     margin-left: 0px;
  }
- 
+ input{
+    border: 1px solid rgb(227, 220, 220);
+    border-radius: 4px;
+ }
+ input:focus{
+    border: 2px solid blue;
+    box-shadow: 5px 5px 5px rgb(183, 160, 160);
+    outline: none;
+ }
+ input:invalid{
+    border: 2px solid red;
+    box-shadow: 5px 5px 5px rgb(183, 160, 160);
+    outline: none;
+ }
+ input[type='password']:valid{
+    border: 2px solid green;
+    box-shadow: 5px 5px 5px rgb(183, 160, 160);
+    outline: none;
+ }
+ input[type='submit']{
+   align-content: start;
+}
+
  .logo-text{
     color: white;
     font-size: 80px;
@@ -60,16 +83,21 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+
 }
-
-.container {
-    height: 100vh;
+.form-details{
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-
-    /* border: 1px solid red; */
+    align-items: center;
+    flex-direction: row;  
+    gap: 100px;
+}
+.container {
+   height: 100vh;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
 }
  
