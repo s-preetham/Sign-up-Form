@@ -1,97 +1,141 @@
 * {
-    padding: 0px;
-    margin: 0px;
+   padding: 0px;
+   margin: 0px;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap');
 @font-face {
   font-family: "myFont";
   src: url("Norse-Bold.otf");
 }
+h1, h3{
+   font-family: "myFont","Bitstream Vera Serif", serif;
+   width: 650px;
+   text-align:justify;
+   text-shadow: rgb(129, 129, 122) 1px 0 5px;
+}
 img {
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
-    left: 0px;
-    top: 0px;
-  position: relative;
+   padding: 0px;
+   margin: 0px;
+   width: 100%;
+   height: 100vh;
+   z-index: -1;
+   left: 0px;
+   top: 0px;
+   position: relative;
  }
  
  .car-image{
-    width: 100px;
-    height: 100px;
-    z-index: 1;
+   width: 100px;
+   height: 100px;
+   z-index: 1;
  }
  .logo{
-    top: 140px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    height: 200px;
-    width:40%;
-    background-color: rgba(0, 0, 0, 0.8);
+   top: 140px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   height: 200px;
+   width:40%;
+   background-color: rgba(0, 0, 0, 0.8);
  }
  label{
-    font-size: 10px;
-    margin: 10px;
-    margin-left: 0px;
+   font-size: 10px;
+   margin: 20px;
+   margin-left: 0px;
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style:normal;  
+   color: rgb(115, 4, 4);  
+   letter-spacing: 2px;
  }
  input{
-    border: 1px solid rgb(227, 220, 220);
-    border-radius: 4px;
+   border: 1px solid rgb(227, 220, 220);
+   border-radius: 4px;
+   height: 35px;
+   width: 240px;
+   margin: 10px;
+   margin-left: 0px;
+   padding: 10px;
+   font-weight: 700;
+   box-shadow: 1px 1px 6px rgb(183, 160, 160);
+ }
+ input::placeholder{
+   font-weight: 200;
+   color: rgb(167, 189, 189);
  }
  input:focus{
-    border: 2px solid blue;
-    box-shadow: 5px 5px 5px rgb(183, 160, 160);
-    outline: none;
+   border: 2px solid blue;
+   box-shadow: 1px 1px 6px rgb(183, 160, 160);
+   outline: none;
  }
+ input:not(:empty){
+   border: 10px solid green;
+ }
+ 
  input:invalid{
-    border: 2px solid red;
-    box-shadow: 5px 5px 5px rgb(183, 160, 160);
-    outline: none;
+   border: 2px solid red;
+   box-shadow: 1px 1px 6px rgb(183, 160, 160);
+   outline: none;
  }
  input[type='password']:valid{
-    border: 2px solid green;
-    box-shadow: 5px 5px 5px rgb(183, 160, 160);
-    outline: none;
+   border: 2px solid green;
+   box-shadow: 5px 5px 5px rgb(183, 160, 160);
+   outline: none;
  }
  input[type='submit']{
-   align-content: start;
+   width: 120px;
+   height: 40px;
+   cursor: pointer;
+   color: rgb(255, 255, 255);
+   background-color: rgb(162, 1, 1);
+   font-weight: 600;
+   border-radius: 5px;
+   letter-spacing: 2px;
+}
+input[type='submit']:active , input[type='submit']:focus,input[type='submit']:active{
+   box-shadow: 1px 5px 5px rgb(183, 160, 160);
+   border: 2px solid black;
+   outline: none;
 }
 
- .logo-text{
-    color: white;
-    font-size: 80px;
-    font-family: "myFont","Bitstream Vera Serif", serif;
- }
+.submit-but{
+   height: 100px;
+}
+.logo-text{
+   color: white;
+   font-size: 80px;
+   font-family: "myFont","Bitstream Vera Serif", serif;
+}
 .image {
-    width: 40%;  
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+   width: 40%;  
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
 }
 #form-container {
-    width: 60%;
-    border: 1px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+   width: 60%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 20px;
+   background-color: rgb(244, 220, 220);
 }
 .form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 50px;
 }
 .form-details{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;  
-    gap: 100px;
+   display: flex;
+   justify-content:space-between;
+   align-items: center;
+   flex-direction: row;  
+   gap: 100px;
 }
 .container {
    height: 100vh;

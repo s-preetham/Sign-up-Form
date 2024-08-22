@@ -18,6 +18,8 @@
             <img src="noham-genevieve-jhzjNOJJTTM-unsplash.jpg"  alt="picture of skyscrapers">
         </div>
         <div id="form-container">
+            <h1>Welcome to Tripzy! The right place for finding the best deals on trips and rentals</h1>
+            <h3>SIgn up to know more about us</h3>
             <form action="#" method="post">
                 <div class="form">
                     <div class="form-details">
@@ -25,35 +27,48 @@
                         <label>
                             FIRST NAME
                         </label><br>
-                        <input type="text" name="first_name" id="firstname"><br>
+                        <input type="text" name="first_name" id="firstname" placeholder="Name"><br>
                         <label>
                             EMAIL
                         </label><br>
-                        <input type="email" name="email" id="email"><br>
+                        <input type="email" name="email" id="email" placeholder="Email"><br>
                         <label>
                             PASSWORD
                         </label><br>
-                        <input type="password" name="password" id="password" required><br>
+                        <input type="password" name="password" id="password" required placeholder="Password"><br>
                         </div>
                         <div class="form-2">
                         <label>
                             LAST NAME
                         </label><br>
-                        <input type="text" name="last_name" id="lastname"><br>
+                        <input type="text" name="last_name" id="lastname" placeholder="Name"><br>
                         <label>
                             PHONE NUMBER
                         </label><br>
-                        <input type="number" name="phone" id="phone"><br>
+                        <input type="number" name="phone" id="phone" placeholder="Number"><br>
                         <label>
                             CONFIRM PASSWORD
                         </label><br>
                         <input type="password" name="confirm" id="confirm" required><br>
                         </div>
                     </div>
-                    <input type="submit" value="Submit">
+                    <div class="submit-but" onclick="funcc()">
+                        <input type="submit" value="Submit">
+                    </div>
                 </div>
             </form>
         </div>
     </div>
+    <script>
+        let pass1 = document.getElementById('password');
+        let pass2 = document.getElementById('confirm');
+        function funcc(){
+            if(pass1.innerText != null && pass2.innerText != null){
+                if(pass1.innerText===pass2.innerText){
+                    alert("Matching");
+                }
+            }
+        }
+    </script>
 </body>
 </html>
