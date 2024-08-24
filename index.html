@@ -20,7 +20,7 @@
         <div id="form-container">
             <h1>Welcome to Tripzy! The right place for finding the best deals on trips and rentals</h1>
             <h3>SIgn up to know more about us</h3>
-            <form action="#" method="post">
+            <form action="#" method="post" onsubmit="validateMyForm();">
                 <div class="form">
                     <div class="form-details">
                         <div class="form-1">
@@ -31,11 +31,12 @@
                         <label>
                             EMAIL
                         </label><br>
-                        <input type="email" name="email" id="email" placeholder="Email"><br>
+                        <input type="email" name="email" id="email" placeholder="E-mail"><br>
                         <label>
                             PASSWORD
                         </label><br>
                         <input type="password" name="password" id="password" required placeholder="Password"><br>
+                        <div id="confi"></div>
                         </div>
                         <div class="form-2">
                         <label>
@@ -45,15 +46,15 @@
                         <label>
                             PHONE NUMBER
                         </label><br>
-                        <input type="number" name="phone" id="phone" placeholder="Number"><br>
+                        <input type="text" max = "14" name="phone" id="phone" placeholder="+XX-XXXXXXXXXX" pattern="([\+]\d{2}[\-]\d{10})"><br>
                         <label>
                             CONFIRM PASSWORD
                         </label><br>
                         <input type="password" name="confirm" id="confirm" required><br>
                         </div>
                     </div>
-                    <div class="submit-but" onclick="funcc()">
-                        <input type="submit" value="Submit">
+                    <div class="submit-but">
+                        <input id = "submit" type="submit" value="Submit">
                     </div>
                 </div>
             </form>
@@ -62,10 +63,20 @@
     <script>
         let pass1 = document.getElementById('password');
         let pass2 = document.getElementById('confirm');
-        function funcc(){
-            if(pass1.innerText != null && pass2.innerText != null){
-                if(pass1.innerText===pass2.innerText){
-                    alert("Matching");
+        let button = document.getElementById('submit');
+        let text = document.getElementById('confi');  
+        function validateMyForm(){
+            if(pass1.value != '' || pass2.value != ''){
+                if(pass1.value==pass2.value){
+                    console.log(pass1.value);
+                    text.textContent = "password matching";
+                    alert("matching");
+                    return true;
+                }
+                else{
+                    event.preventDefault();
+                    alert("not matching");
+                    return false;
                 }
             }
         }

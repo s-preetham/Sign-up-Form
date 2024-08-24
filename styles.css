@@ -52,12 +52,14 @@ img {
  input{
    border: 1px solid rgb(227, 220, 220);
    border-radius: 4px;
-   height: 35px;
+   height: 20px;
    width: 240px;
    margin: 10px;
    margin-left: 0px;
    padding: 10px;
    font-weight: 700;
+   letter-spacing: 2px;
+   color: rgb(139, 138, 137);
    box-shadow: 1px 1px 6px rgb(183, 160, 160);
  }
  input::placeholder{
