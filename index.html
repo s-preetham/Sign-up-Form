@@ -68,14 +68,11 @@
         function validateMyForm(){
             if(pass1.value != '' || pass2.value != ''){
                 if(pass1.value==pass2.value){
-                    console.log(pass1.value);
-                    text.textContent = "password matching";
-                    alert("matching");
                     return true;
                 }
                 else{
                     event.preventDefault();
-                    alert("not matching");
+                    alert("passwords not matching");
                     return false;
                 }
             }
